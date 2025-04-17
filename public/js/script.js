@@ -12,7 +12,7 @@ if(navigator.geolocation){
         {
             enableHighAccuracy:true,
             maximumAge:0,
-            timeout:5000
+            timeout:4000,
         }
     )
 }
@@ -20,7 +20,7 @@ if(navigator.geolocation){
  const map = L.map('map').setView([0,0],17);
 
  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    attribution:"Sahil thakur"
+    attribution:"a-BRA ka da-BRA"
  }).addTo(map);
 
 
@@ -30,7 +30,7 @@ if(navigator.geolocation){
     const {id,latitude,longitude} = data;
     map.setView([latitude,longitude]);
     if(markers[id]){
-        markers[id].setLatLng([latitude,longitude],16)
+        markers[id].setLatLng([latitude,longitude],17)
     }
     else{
         markers[id] = L.marker([latitude,longitude]).addTo(map);

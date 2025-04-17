@@ -26,4 +26,6 @@ app.get('/',function (req,res){
     res.render('index');
 })
 
-server.listen(3000)
+server.listen(3000,()=>{
+    console.log('server starting at port 3000');
+})
